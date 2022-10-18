@@ -1,0 +1,42 @@
+.header1{
+    background-color: black;
+    display: flex;
+    float: inline-end;
+    justify-content: flex-end;
+}
+
+.header1 img{
+    height: 95%;
+    width: 35%;
+}
+
+.icons{
+    color: aliceblue;
+}
+
+.nav{
+    background-color: rgb(30, 34, 44);
+}
+
+.nav nav ul li{
+    float:inline-end;
+    display: flex;
+    line-height: 20px;
+    color: #fff;
+    font-family: "Spartan",sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-right: 15px;
+    padding-right: 15px;
+    position: relative;
+
+}
+
+.target img{
+    font-family: gustan-medium,Arial,sans-serif;
+    flex-basis: 0;
+    height: 5%;
+    width: 5%;
+};
