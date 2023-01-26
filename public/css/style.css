@@ -23,9 +23,109 @@
   margin-left: 15%;
 }
 
-.login {
-  color: aliceblue;
-  margin-right: 10px;
+.container-icon {
+  color: white;
+  margin-right: 25px;
+  padding: 5px;
+  position: relative;
+}
+
+.icon-cart:hover{
+  cursor: pointer;
+}
+
+.count-product{
+  position: absolute;
+  top: 55%;
+  right: 0;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 50px;
+}
+
+.contador-product{
+  font-weight: bold;
+}
+
+.container-cart-product{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: 35px;
+  background-color: white;
+  color: black;
+  width: 300px;
+  height: 160px;
+  z-index: 1;
+}
+
+.cart-product{
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.info-cart-product{
+  display: flex;
+  justify-content: space-between;
+  flex: 0.8;
+}
+
+.titulo-producto-carrito{
+  font-size: 20px;
+}
+
+.precio-producto-carrito{
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.cantidad-producto-carrito{
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.icon-close{
+  width: 25px;
+  height: 25px;
+}
+
+.icon-login{
+  margin: 10px;
+}
+
+.icon-close:hover{
+  stroke: red;
+  cursor: pointer;
+}
+
+.cart-total{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.cart-total h3{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.total-pagar{
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.hidden-cart{
+  display: none;
 }
 
 .nav{
@@ -108,6 +208,7 @@
 }
 
 .card img{
+  margin-left: 13px;
   width: 90%;
   height: 250px;
 }
@@ -115,7 +216,6 @@
 .card .description{
   padding: 15px;
   text-align: center;
-  
 }
 
 .description a{
@@ -149,7 +249,7 @@
   max-width: 100%;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 50px;
   padding: 45px 0px;
   font-family: 'Roboto', sans-serif;
@@ -163,6 +263,15 @@
 
 .nav-f li{
   list-style: none;
+  transition: transform 0.1s;
+}
+
+.nav-f .li2:hover{
+  transform: none;
+}
+
+.nav-f li:hover{
+  transform: scale(1.1);
 }
 
 .nav-f a{
@@ -290,6 +399,7 @@
   max-width: 1200px;
   margin: auto;
   margin-top: 5px;
+  margin-bottom: 10px;
   overflow: hidden;
   padding: var(--paddingsecciones);
   font-family: 'Roboto', sans-serif;
@@ -315,7 +425,46 @@
   margin-left: 75px;
 }
 
+.b-cat .img-mas{
+  margin-top: 7px;
+}
+
 /*Fin Catalogo*/
+
+/*Comienzo Productos*/
+
+.container-product{
+  padding: 20px;
+  margin-left: 5%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.product{
+  width: 15%;
+  margin: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+  cursor: default;
+  transition: all 400ms ease;
+}
+
+.product:hover{
+  box-shadow: 5px 5px 20px rgba(0,0,0,00.4);
+  transform: translateY(-3%);
+}
+
+.product img{
+  margin-left: 13px;
+  width: 90%;
+  height: 150px;
+}
+
+.product .description{
+  padding: 15px;
+  text-align: center;
+}
 
 /*Comienzo Contacto*/
 .contacto{
@@ -352,7 +501,8 @@
   padding: 10px 20px;
   box-sizing: border-box;
   margin-top: 20px;
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
+  padding-top: 30px; 
   border-radius: 7px;
 }
 
@@ -384,11 +534,63 @@
 }
 /*Fin Contacto*/
 
-/*Comienzo Productos*/
+/*Comienzo Como Comprar*/
+.b-comoComprar{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 5px;
+  overflow: hidden;
+  padding: var(--paddingsecciones);
+}
+
+.b-comoComprar p{
+  text-align: justify;
+}
+
+/*Fin Como Comprar*/
+
+/*Comienzo formas de pago*/
+
+.b-formadepago{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 5px;
+  overflow: hidden;
+  padding: var(--paddingsecciones);
+}
+
+.b-formadepago p{
+  text-align: justify;
+}
 
 
 
-/*Fin Productos*/
+/*Fin formas de pago*/
+
+/*Comienzo Metodos de Envio*/
+.cont-envios{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 5px;
+  overflow: hidden;
+  padding: var(--paddingsecciones);
+  font-family: 'Roboto', sans-serif;
+  text-align: justify;
+}
+
+.cont-envios h1{
+  text-align: center;
+}
+
+.cont-envios p{
+  text-align: justify;
+}
+
+
+/*Fin Envios*/
 
 @media (max-width:480px) {
   form{
